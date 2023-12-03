@@ -2,10 +2,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 class Match{
-     int score;
-     int fours;
-     int six;
-     int ball;
+     int score,fours,six,ball;
      float strike;
      void setMatch1(){
         Scanner scanner=new Scanner(System.in);
@@ -20,11 +17,11 @@ class Match{
         strike=getStrike();
         System.out.println("***** DETAILS ADDED SUCCESSFULLY ******");
     }
-     void getMatch(){
-        System.out.println("BALL FACED : "+ball);
-        System.out.println("RUNS : "+score);
-        System.out.println("FOURS(4'S) : "+fours);
-        System.out.println("SIX(6'S) : "+six);
+     void showMatch(){
+        System.out.println("BALL FACED  : "+ball);
+        System.out.println("RUNS        : "+score);
+        System.out.println("FOURS(4'S)  : "+fours);
+        System.out.println("SIX(6'S)    : "+six);
         System.out.println("STRIKE RATE : "+strike);
     }
      float getStrike(){
@@ -45,7 +42,7 @@ class BatsMan{
         System.out.println("****** DETAILS ADDED SUCCESSFULLY ******");
 
     }
-    void getBatsman(){
+    void showBatsman(){
         System.out.println("NAME : "+name);
         System.out.println("TYPE : "+ batType);
         System.out.println("INNINGS : "+getInnings());
@@ -126,7 +123,7 @@ public class BatsManDetails {
                     for (BatsMan i : player) {
                         if (i.name.equals(name3)) {
                             System.out.println("\n******* BATSMAN DETAILS *******");
-                            i.getBatsman();
+                            i.showBatsman();
                         }
                         c++;
                     }
@@ -139,7 +136,7 @@ public class BatsManDetails {
                         System.out.println("\nBATSMAN LOG IS EMPTY !!!");
                     for (BatsMan i : player) {
                         System.out.println("\n******* BATSMAN-" + (player.indexOf(i) + 1) + " *******");
-                        i.getBatsman();
+                        i.showBatsman();
                     }
                 }
                 case 5 -> {System.out.print("\nENTER THE BATSMAN NAME: ");
@@ -149,7 +146,7 @@ public class BatsManDetails {
                         if (i.name.equals(name2)) {
                             for (Match j : i.matchDetails) {
                                 System.out.println("\n******* MATCH-" + (i.matchDetails.indexOf(j) + 1) + " DETAILS *******");
-                                j.getMatch();
+                                j.showMatch();
                             }
                             b++;
                         }

@@ -18,12 +18,12 @@ class Match1 {
      float getOver(){
         return (float) balls /6;
     }
-     void getMatch(){
-        System.out.println("OVERS : "+ over);
-        System.out.println("BALLS : "+ balls);
-        System.out.println("RUNS : "+ runs);
+     void showMatch(){
+        System.out.println("OVERS   : "+ over);
+        System.out.println("BALLS   : "+ balls);
+        System.out.println("RUNS    : "+ runs);
         System.out.println("WICKETS : "+ wickets);
-        System.out.println("MAIDEN : "+ maiden);
+        System.out.println("MAIDEN  : "+ maiden);
         System.out.println("ECONOMY : "+ eco);
     }
      float getEco(){
@@ -42,9 +42,9 @@ class Bowler {
         this.bowlType = scanner.nextLine();
         System.out.println("****** DETAILS ADDED SUCCESSFULLY *****");
     }
-    void getBowler() {
-        System.out.println("NAME : "+name);
-        System.out.println("TYPE : " + bowlType);
+    void showBowler() {
+        System.out.println("NAME    : "+name);
+        System.out.println("TYPE    : " + bowlType);
         System.out.println("INNINGS : " + getInnings());
         System.out.println("WICKETS : " + totalWicket());
         System.out.println("ECONOMY : " + getEco());
@@ -128,7 +128,7 @@ public class BowlerDetails {
                     for (Bowler i : player) {
                         if (i.name.equals(name3)) {
                             System.out.println("\n******* BOWLER'S DETAILS *******");
-                            i.getBowler();
+                            i.showBowler();
                         }
                         c++;
                     }
@@ -141,7 +141,7 @@ public class BowlerDetails {
                         System.out.println("\nBOWLER'S LOG IS EMPTY !!!");
                     for (Bowler i : player) {
                         System.out.println("\n******* BOWLER " + (player.indexOf(i) + 1) + " *******");
-                        i.getBowler();
+                        i.showBowler();
                     }
                 }
                 case 5 -> {
@@ -152,7 +152,7 @@ public class BowlerDetails {
                         if (i.name.equals(name2)) {
                             for (Match1 j : i.match1Details) {
                                 System.out.println("\n******* MATCH " + (i.match1Details.indexOf(j) + 1) + " DETAILS *******");
-                                j.getMatch();
+                                j.showMatch();
                             }
                             b++;
                         }

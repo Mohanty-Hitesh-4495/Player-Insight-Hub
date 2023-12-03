@@ -27,19 +27,19 @@ class Match2 {
         this.over=getOver();
         System.out.println("***** DETAILS ADDED SUCCESSFULLY *****");
     }
-    void getMatch(){
+    void showMatch(){
         System.out.println("***** BATTING *****");
-        System.out.println("BALL FACED : "+ball);
-        System.out.println("RUNS : "+score);
-        System.out.println("FOURS(4'S) : "+fours);
-        System.out.println("SIX(6'S) : "+six);
+        System.out.println("BALL FACED  : "+ball);
+        System.out.println("RUNS        : "+score);
+        System.out.println("FOURS(4'S)  : "+fours);
+        System.out.println("SIX(6'S)    : "+six);
         System.out.println("STRIKE RATE : "+strike);
         System.out.println("***** BOWLING *****");
-        System.out.println("OVERS : "+ over);
-        System.out.println("BALLS : "+ balls);
-        System.out.println("RUNS : "+ runs);
+        System.out.println("OVERS   : "+ over);
+        System.out.println("BALLS   : "+ balls);
+        System.out.println("RUNS    : "+ runs);
         System.out.println("WICKETS : "+ wickets);
-        System.out.println("MAIDEN : "+ maiden);
+        System.out.println("MAIDEN  : "+ maiden);
         System.out.println("ECONOMY : "+ eco);
     }
     float getEco() { // return the Economy of a bowler in a match
@@ -68,7 +68,7 @@ class AllRounder {
 
     }
 
-    void getAllRounder() {
+    void showAllRounder() {
         System.out.println("NAME : " + name);
         System.out.println("INNINGS : " + getInnings());
         System.out.println("BATTING TYPE : " + batType);
@@ -180,7 +180,7 @@ public class AllRounderDetails {
                     for (AllRounder i : player) {
                         if (i.name.equals(name3)) {
                             System.out.println("\n******* ALL-ROUNDER'S DETAILS *******");
-                            i.getAllRounder();
+                            i.showAllRounder();
                         }
                         c++;
                     }
@@ -193,7 +193,7 @@ public class AllRounderDetails {
                         System.out.println("\nALL-ROUNDER LOG IS EMPTY !!!");
                     for (AllRounder i : player) {
                         System.out.println("\n******* ALL-ROUNDER-" + (player.indexOf(i) + 1) + " *******");
-                        i.getAllRounder();
+                        i.showAllRounder();
                     }
                 }
                 case 5 -> {
@@ -204,7 +204,7 @@ public class AllRounderDetails {
                         if (i.name.equals(name2)) {
                             for (Match2 j : i.match2Details) {
                                 System.out.println("\n******* MATCH-" + (i.match2Details.indexOf(j) + 1) + " DETAILS *******");
-                                j.getMatch();
+                                j.showMatch();
                             }
                             b++;
                         }
